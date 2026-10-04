@@ -1,17 +1,17 @@
 {
   "schema": 2,
-  "desired_sha": "9dded8118ad1821110c0b32d9a99e71eae598ecd",
-  "validated_sha": "9dded8118ad1821110c0b32d9a99e71eae598ecd",
+  "desired_sha": "abe96b75d27ba485d85baae353611bf248379af7",
+  "validated_sha": null,
   "running_sha": "9dded8118ad1821110c0b32d9a99e71eae598ecd",
   "last_good_sha": "9dded8118ad1821110c0b32d9a99e71eae598ecd",
   "health": "healthy",
   "controller": "ready",
   "alive": true,
   "converging": true,
-  "poll_seq": 22,
-  "last_poll_at": "2026-10-04T10:49:56.368Z",
+  "poll_seq": 23,
+  "last_poll_at": "2026-10-04T10:50:01.370Z",
   "control_artifact": "762bd16072fc",
-  "last_result": "poll_ok",
+  "last_result": "candidate_found",
   "error": null,
-  "observed_at": "2026-10-04T10:49:58.233Z"
+  "observed_at": "2026-10-04T10:50:03.576Z"
 }
