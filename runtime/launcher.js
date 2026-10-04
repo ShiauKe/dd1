@@ -12,7 +12,8 @@ async function startAccepted(){runningSha=await git(["rev-parse","HEAD"]);lastGo
 async function deploy(){
  if(busy)return;busy=true;pollSeq++;lastPollAt=new Date().toISOString();let tmp=null,candidate=null,desired=null;
  try{
-  await git(["fetch","origin","main"]);desired=await git(["rev-parse","origin/main"]);if(desired===runningSha){await publishState("poll_ok",{desired_sha:desired,validated_sha:runningSha});return;}
+  try{await git(["fetch","origin","main"])}catch(e){const msg=(e.stderr||e.message||String(e)).trim();console.error("DD1 poll degraded:",msg);await publishState("poll_degraded",{error:msg});return}
+  desired=await git(["rev-parse","origin/main"]);if(desired===runningSha){await publishState("poll_ok",{desired_sha:desired,validated_sha:runningSha});return;}
   if(await git(["status","--porcelain"]))throw new Error("working tree dirty");
   const changed=(await git(["diff","--name-only",runningSha,desired])).split("\n").filter(Boolean),control=changed.some(x=>["runtime/launcher.js","runtime/observer.js"].includes(x));
   await publishState("candidate_found",{desired_sha:desired});
