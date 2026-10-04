@@ -1,7 +1,7 @@
 {
   "schema": 2,
   "desired_sha": "6420eb9d67554822f4dede9dabaf0edf9683ddfe",
-  "validated_sha": "6420eb9d67554822f4dede9dabaf0edf9683ddfe",
+  "validated_sha": null,
   "running_sha": "a7431744927abfb5b96b8ae623a8093a37cef068",
   "last_good_sha": "a7431744927abfb5b96b8ae623a8093a37cef068",
   "health": "healthy",
@@ -11,7 +11,7 @@
   "poll_seq": 89,
   "last_poll_at": "2026-10-04T11:18:30.198Z",
   "control_artifact": "ac964b1e16b8",
-  "last_result": "validated",
-  "error": null,
-  "observed_at": "2026-10-04T11:18:35.232Z"
+  "last_result": "deploy_failed",
+  "error": "activated candidate failed health",
+  "observed_at": "2026-10-04T11:18:45.407Z"
 }
