@@ -10,9 +10,9 @@ async function stop(p){if(!p)return;await new Promise(resolve=>{const t=setTimeo
 async function publishState(result,extra={}){return publish({schema:2,desired_sha:extra.desired_sha||null,validated_sha:extra.validated_sha||null,running_sha:runningSha,last_good_sha:lastGoodSha,health:child?"healthy":"down",controller:"ready",alive:true,converging:busy,poll_seq:pollSeq,last_poll_at:lastPollAt,control_artifact:artifact(),last_result:result,error:extra.error||null})}
 async function startAccepted(){runningSha=await git(["rev-parse","HEAD"]);lastGoodSha=runningSha;child=spawnApp(ROOT,runningSha,PORT);if(!await health(PORT,runningSha))throw new Error("accepted runtime failed health");await publishState("runtime_ready")}
 async function deploy(){
- if(busy)return;busy=true;pollSeq++;lastPollAt=new Date().toISOString();let tmp=null,candidate=null;
+ if(busy)return;busy=true;pollSeq++;lastPollAt=new Date().toISOString();let tmp=null,candidate=null,desired=null;
  try{
-  await git(["fetch","origin","main"]);const desired=await git(["rev-parse","origin/main"]);if(desired===runningSha){await publishState("poll_ok",{desired_sha:desired,validated_sha:runningSha});return;}
+  await git(["fetch","origin","main"]);desired=await git(["rev-parse","origin/main"]);if(desired===runningSha){await publishState("poll_ok",{desired_sha:desired,validated_sha:runningSha});return;}
   if(await git(["status","--porcelain"]))throw new Error("working tree dirty");
   const changed=(await git(["diff","--name-only",runningSha,desired])).split("\n").filter(Boolean),control=changed.some(x=>["runtime/launcher.js","runtime/observer.js"].includes(x));
   await publishState("candidate_found",{desired_sha:desired});
@@ -24,7 +24,7 @@ async function deploy(){
   child=next;lastGoodSha=runningSha;runningSha=desired;await publishState("deployed",{desired_sha:desired,validated_sha:desired});
   console.log("DD1 deployed:",desired.slice(0,7));
   if(control&&process.env.DD1_SUPERVISED==="1"){console.log("DD1 controller update: supervised handoff");process.exit(RESTART)}
- }catch(e){const msg=(e.stderr||e.message||String(e)).trim();console.error("DD1 deploy failed:",msg);if(candidate)await stop(candidate);if(!child&&lastGoodSha){try{await git(["reset","--hard",lastGoodSha]);child=spawnApp(ROOT,lastGoodSha,PORT);if(await health(PORT,lastGoodSha))runningSha=lastGoodSha}catch{}}await publishState("deploy_failed",{error:msg})}
+ }catch(e){const msg=(e.stderr||e.message||String(e)).trim();console.error("DD1 deploy failed:",msg);if(candidate)await stop(candidate);if(!child&&lastGoodSha){try{await git(["reset","--hard",lastGoodSha]);child=spawnApp(ROOT,lastGoodSha,PORT);if(await health(PORT,lastGoodSha))runningSha=lastGoodSha}catch{}}await publishState("deploy_failed",{desired_sha:desired,error:msg})}
  finally{if(tmp)try{await git(["worktree","remove","--force",tmp])}catch{}busy=false}
 }
 (async()=>{await startAccepted();console.log("DD1_CONTROL_READY "+artifact());console.log("DD1 controller watching origin/main every "+POLL/1000+"s");deploy();setInterval(deploy,POLL)})();
