@@ -2,16 +2,16 @@
   "schema": 2,
   "desired_sha": "a7431744927abfb5b96b8ae623a8093a37cef068",
   "validated_sha": "a7431744927abfb5b96b8ae623a8093a37cef068",
-  "running_sha": "cb3fc99a7e7c3a665c0bf9b6607c7f0c10fbdfcd",
-  "last_good_sha": "9dded8118ad1821110c0b32d9a99e71eae598ecd",
+  "running_sha": "a7431744927abfb5b96b8ae623a8093a37cef068",
+  "last_good_sha": "cb3fc99a7e7c3a665c0bf9b6607c7f0c10fbdfcd",
   "health": "healthy",
   "controller": "ready",
   "alive": true,
   "converging": true,
   "poll_seq": 38,
   "last_poll_at": "2026-10-04T10:51:41.388Z",
-  "control_artifact": "762bd16072fc",
-  "last_result": "validated",
+  "control_artifact": "ac964b1e16b8",
+  "last_result": "deployed",
   "error": null,
-  "observed_at": "2026-10-04T10:51:46.558Z"
+  "observed_at": "2026-10-04T10:51:50.184Z"
 }
