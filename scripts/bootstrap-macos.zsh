@@ -50,9 +50,22 @@ EOF
 plutil -lint "$PLIST" >/dev/null
 
 say "converging launchd"
-launchctl bootout "gui/$UID_NOW/$LABEL" 2>/dev/null || true
-launchctl bootstrap "gui/$UID_NOW" "$PLIST"
-launchctl kickstart -k "gui/$UID_NOW/$LABEL"
+# Convergence is state-aware: a loaded healthy service is already acceptable.
+if launchctl print "gui/$UID_NOW/$LABEL" >/dev/null 2>&1; then
+  if [[ -f "$LOGDIR/stdout.log" ]] && tail -n 160 "$LOGDIR/stdout.log" | grep -q "DD1_CONTROL_READY "; then
+    say "existing LaunchAgent is ready; preserving healthy runtime"
+  else
+    say "existing LaunchAgent is not ready; restarting"
+    launchctl kickstart -k "gui/$UID_NOW/$LABEL"
+  fi
+else
+  say "LaunchAgent not loaded; registering"
+  launchctl bootstrap "gui/$UID_NOW" "$PLIST" || {
+    sleep 1
+    launchctl print "gui/$UID_NOW/$LABEL" >/dev/null 2>&1 || die "launchd registration failed"
+  }
+  launchctl kickstart -k "gui/$UID_NOW/$LABEL"
+fi
 
 say "waiting for controller readiness"
 READY=0
