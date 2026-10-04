@@ -1,0 +1,7 @@
+const {execFileSync}=require("node:child_process"),fs=require("node:fs"),path=require("node:path");
+const root=path.resolve(process.argv[2]||".");
+for(const rel of ["package.json","app/server.js","runtime/launcher.js","runtime/validator.js","bootstrap/bootstrap.js"]){
+  const file=path.join(root,rel);if(!fs.existsSync(file))throw new Error("missing required file: "+rel);
+  if(rel.endsWith(".js"))execFileSync(process.execPath,["--check",file],{stdio:"inherit"});
+}
+console.log("DD1_VALIDATED");
