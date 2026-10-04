@@ -91,3 +91,19 @@ For environments where GitHub is already trusted:
         -> agent reads artifact
 
 This is a reference implementation only. Repositories MUST NOT depend on DD1 itself as a runtime merely to satisfy the invariant.
+
+
+## Delivery invariant
+
+A sender-side execution is not evidence of delivery.
+
+Every message SHOULD carry a unique message identity. When delivery matters, the transport MUST distinguish at least:
+
+    CREATED -> SENT -> DELIVERED
+
+SENT means the local transport attempted publication.
+DELIVERED means the agent-visible endpoint independently reflects the same message identity (or an equivalent verifiable receipt).
+
+Freshness MUST be evaluated at the receiving boundary. A successful command with a stale remote observation is a failed delivery, not a successful observation.
+
+Transport implementations SHOULD avoid coupling message publication to the application's mutable working tree. Observation state and development state are separate state machines and SHOULD NOT overwrite or block each other.
