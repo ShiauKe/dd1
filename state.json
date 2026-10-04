@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "desired_sha": "d97617c3dfd107ed85903e1a0b86981aa5414c4c",
+  "desired_sha": "6420eb9d67554822f4dede9dabaf0edf9683ddfe",
   "validated_sha": null,
   "running_sha": "a7431744927abfb5b96b8ae623a8093a37cef068",
   "last_good_sha": "a7431744927abfb5b96b8ae623a8093a37cef068",
@@ -8,10 +8,10 @@
   "controller": "ready",
   "alive": true,
   "converging": true,
-  "poll_seq": 49,
-  "last_poll_at": "2026-10-04T11:05:10.044Z",
+  "poll_seq": 50,
+  "last_poll_at": "2026-10-04T11:05:30.049Z",
   "control_artifact": "ac964b1e16b8",
-  "last_result": "deploy_failed",
-  "error": "activated candidate failed health",
-  "observed_at": "2026-10-04T11:05:25.270Z"
+  "last_result": "candidate_found",
+  "error": null,
+  "observed_at": "2026-10-04T11:05:32.162Z"
 }
