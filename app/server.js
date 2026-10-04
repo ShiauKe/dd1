@@ -9,4 +9,3 @@ server.listen(PORT,"127.0.0.1",()=>console.log("DD1_APP_READY "+PORT+" "+SHA));
 function stop(){server.close(()=>process.exit(0));setTimeout(()=>process.exit(1),2000).unref()}
 process.on("SIGTERM",stop);process.on("SIGINT",stop);
 
-const DD1_INTENTIONAL_VALIDATION_PROBE = ;
