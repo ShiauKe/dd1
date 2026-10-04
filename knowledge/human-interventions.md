@@ -5,30 +5,23 @@ Every non-delegable human action is recorded here. The optimization target is to
 ## HI-001 — Authorize a newly created repository
 - Date: 2026-10-04
 - Status: resolved
-- Trigger: new repository was not included in GitHub integration repository access.
-- Human action: GitHub Settings → Applications → Installed GitHub Apps → Configure → add the repository.
+- Human action: add the new repository in GitHub integration Configure.
 - Verified result: agent successfully wrote DD1.
-- Current classification: trust-boundary onboarding step.
+- Classification: repository trust boundary.
 
 ## HI-002 — First machine bootstrap
-- Status: pending
-- Desired human action: one initial command/install action on the Mac only.
-- Success criterion: DD1 starts automatically after login/reboot, follows `origin/main`, publishes runtime state, and routine updates require no terminal/log copying.
-- Design rule: do not ask the human to manually fetch, pull, restart, inspect logs, or relay runtime output if the system can perform or publish it itself.
+- Status: ready for execution
+- Human action: run the DD1 macOS bootstrap installer once.
+- Why human is still required: installing a persistent process on the user's machine crosses the machine trust boundary.
+- After completion: launchd starts DD1 after login/reboot; controller follows `origin/main`; observation publishes runtime state; controller updates use supervised handoff.
+- Routine actions explicitly eliminated: manual fetch/pull, npm start, restart, terminal log relay, running-SHA relay.
 
-## Onboarding target
+## Target
 ```
-create repo
-  ↓
-authorize repo in GitHub integration       [HUMAN / trust boundary]
-  ↓
-agent bootstraps repo                     [AUTOMATIC]
-  ↓
-bootstrap machine once                    [HUMAN / machine trust boundary]
-  ↓
-login/reboot persistence                  [AUTOMATIC]
-  ↓
-chat → commit → validate → activate       [AUTOMATIC]
-  ↓
-observe / diagnose / recover              [AUTOMATIC]
+repo authorization [HUMAN ONCE]
+        ↓
+machine bootstrap   [HUMAN ONCE]
+        ↓
+chat → Git → validate → health → activate → observe → recover
+                    [AUTOMATIC]
 ```
