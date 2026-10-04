@@ -1,0 +1,5 @@
+{
+  "name":"dd1","version":"0.1.0","private":true,
+  "scripts":{"start":"node bootstrap/bootstrap.js","controller":"node runtime/launcher.js","app":"node app/server.js","validate":"node runtime/validator.js ."},
+  "engines":{"node":">=22"}
+}
