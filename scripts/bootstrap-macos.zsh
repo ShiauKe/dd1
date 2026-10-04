@@ -52,10 +52,15 @@ plutil -lint "$PLIST" >/dev/null
 say "converging launchd"
 # Convergence is state-aware: a loaded healthy service is already acceptable.
 if launchctl print "gui/$UID_NOW/$LABEL" >/dev/null 2>&1; then
-  if [[ -f "$LOGDIR/stdout.log" ]] && tail -n 160 "$LOGDIR/stdout.log" | grep -q "DD1_CONTROL_READY "; then
-    say "existing LaunchAgent is ready; preserving healthy runtime"
+  EXPECTED_CONTROL="$(node -e 'const fs=require("fs"),c=require("crypto");process.stdout.write(c.createHash("sha256").update(fs.readFileSync("runtime/launcher.js")).digest("hex").slice(0,12))')"
+  OBSERVED_CONTROL=""
+  if [[ -f "$LOGDIR/stdout.log" ]]; then
+    OBSERVED_CONTROL="$(tail -n 200 "$LOGDIR/stdout.log" | sed -n 's/.*DD1_CONTROL_READY \([a-f0-9]*\).*/\1/p' | tail -n 1)"
+  fi
+  if [[ "$OBSERVED_CONTROL" == "$EXPECTED_CONTROL" ]]; then
+    say "existing control artifact is current; preserving runtime"
   else
-    say "existing LaunchAgent is not ready; restarting"
+    say "control artifact changed or not ready; restarting controller"
     launchctl kickstart -k "gui/$UID_NOW/$LABEL"
   fi
 else
