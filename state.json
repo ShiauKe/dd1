@@ -1,7 +1,7 @@
 {
   "schema": 2,
   "desired_sha": "57bcd8c5938896818e8222f7da0dbb82fd9e47e9",
-  "validated_sha": null,
+  "validated_sha": "57bcd8c5938896818e8222f7da0dbb82fd9e47e9",
   "running_sha": "a7431744927abfb5b96b8ae623a8093a37cef068",
   "last_good_sha": "a7431744927abfb5b96b8ae623a8093a37cef068",
   "health": "healthy",
@@ -11,7 +11,7 @@
   "poll_seq": 113,
   "last_poll_at": "2026-10-04T11:26:30.287Z",
   "control_artifact": "ac964b1e16b8",
-  "last_result": "candidate_found",
+  "last_result": "validated",
   "error": null,
-  "observed_at": "2026-10-04T11:26:32.179Z"
+  "observed_at": "2026-10-04T11:26:35.188Z"
 }
