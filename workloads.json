@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "workloads": [
+    {
+      "repo": "ShiauKe/dd1-zero-touch-test",
+      "branch": "main",
+      "enabled": true
+    }
+  ]
+}
