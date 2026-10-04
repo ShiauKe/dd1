@@ -2,12 +2,12 @@
   "schema": 1,
   "desired_sha": "e3063473d7e0242609269507ad379c862fb5a2ff",
   "validated_sha": "e3063473d7e0242609269507ad379c862fb5a2ff",
-  "running_sha": "1a4b1e56ed4aefc9d0e5c2cadf4757bda42ddee9",
+  "running_sha": "e3063473d7e0242609269507ad379c862fb5a2ff",
   "last_good_sha": "1a4b1e56ed4aefc9d0e5c2cadf4757bda42ddee9",
   "health": "healthy",
   "controller": "ready",
   "control_artifact": "9620bdfbf00a",
-  "last_result": "validated",
+  "last_result": "deployed",
   "error": null,
-  "observed_at": "2026-10-04T10:14:21.147Z"
+  "observed_at": "2026-10-04T10:14:24.230Z"
 }
