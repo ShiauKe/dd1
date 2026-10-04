@@ -1,17 +1,17 @@
 {
   "schema": 2,
-  "desired_sha": null,
-  "validated_sha": null,
+  "desired_sha": "a7431744927abfb5b96b8ae623a8093a37cef068",
+  "validated_sha": "a7431744927abfb5b96b8ae623a8093a37cef068",
   "running_sha": "a7431744927abfb5b96b8ae623a8093a37cef068",
   "last_good_sha": "a7431744927abfb5b96b8ae623a8093a37cef068",
   "health": "healthy",
   "controller": "ready",
   "alive": true,
-  "converging": false,
-  "poll_seq": 0,
-  "last_poll_at": null,
+  "converging": true,
+  "poll_seq": 1,
+  "last_poll_at": "2026-10-04T10:51:54.885Z",
   "control_artifact": "ac964b1e16b8",
-  "last_result": "runtime_ready",
+  "last_result": "poll_ok",
   "error": null,
-  "observed_at": "2026-10-04T10:51:53.328Z"
+  "observed_at": "2026-10-04T10:51:56.779Z"
 }
