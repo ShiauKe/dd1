@@ -3,13 +3,14 @@ const exec=promisify(execFile),ROOT=path.resolve(__dirname,".."),BRANCH="runtime
 let queue=Promise.resolve();
 async function git(args,cwd=ROOT){return (await exec("git",args,{cwd,timeout:10000,env:{...process.env,GIT_TERMINAL_PROMPT:"0"}})).stdout.trim()}
 const wait=ms=>new Promise(r=>setTimeout(r,ms));
+async function branchExists(remote){try{const out=await git(["ls-remote","--heads",remote,BRANCH]);return Boolean(out)}catch(e){throw e}}
 async function write(payload){
  const dir=fs.mkdtempSync(path.join(os.tmpdir(),"dd1-observe-"));
  try{
   const remote=await git(["remote","get-url","origin"]);await git(["init"],dir);await git(["remote","add","origin",remote],dir);
   for(let i=0;i<MAX;i++)try{
-   try{await git(["fetch","--depth=1","origin",BRANCH],dir);await git(["checkout","-B",BRANCH,"FETCH_HEAD"],dir)}
-   catch{await git(["checkout","--orphan",BRANCH],dir)}
+   if(await branchExists(remote)){await git(["fetch","--depth=1","origin",BRANCH],dir);await git(["checkout","-B",BRANCH,"FETCH_HEAD");}
+   else await git(["checkout","--orphan",BRANCH],dir);
    fs.writeFileSync(path.join(dir,"state.json"),JSON.stringify({...payload,observed_at:new Date().toISOString()},null,2)+"\n");
    await git(["add","state.json"],dir);if(!(await git(["status","--porcelain"],dir)))return true;
    await git(["-c","user.name=DD1 Runtime","-c","user.email=dd1-runtime@local","commit","-m","runtime: publish state"],dir);
