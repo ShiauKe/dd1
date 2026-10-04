@@ -1,13 +1,13 @@
 {
   "schema": 1,
   "desired_sha": "597fe52031c3eebb5ec8b0552016ab3982328c93",
-  "validated_sha": null,
+  "validated_sha": "597fe52031c3eebb5ec8b0552016ab3982328c93",
   "running_sha": "20cb066a3f69ab005b2f66c4b6cc441e608c761e",
   "last_good_sha": "e3063473d7e0242609269507ad379c862fb5a2ff",
   "health": "healthy",
   "controller": "ready",
   "control_artifact": "9620bdfbf00a",
-  "last_result": "candidate_found",
+  "last_result": "validated",
   "error": null,
-  "observed_at": "2026-10-04T10:17:27.900Z"
+  "observed_at": "2026-10-04T10:17:31.115Z"
 }
