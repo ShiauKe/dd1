@@ -13,5 +13,5 @@
   "control_artifact": "ac964b1e16b8",
   "last_result": "deploy_failed",
   "error": "fatal: unable to access 'https://github.com/ShiauKe/dd1.git/': Failed to connect to github.com port 443 after 984955 ms: Timeout was reached",
-  "observed_at": "2026-10-06T20:23:23.248Z"
+  "observed_at": "2026-10-06T21:10:30.718Z"
 }
