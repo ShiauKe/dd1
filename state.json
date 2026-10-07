@@ -8,10 +8,10 @@
   "controller": "ready",
   "alive": true,
   "converging": true,
-  "poll_seq": 4071,
-  "last_poll_at": "2026-10-07T20:54:38.224Z",
+  "poll_seq": 4072,
+  "last_poll_at": "2026-10-07T21:10:53.224Z",
   "control_artifact": "ac964b1e16b8",
   "last_result": "deploy_failed",
-  "error": "fatal: unable to access 'https://github.com/ShiauKe/dd1.git/': Failed to connect to github.com port 443 after 969962 ms: Timeout was reached",
-  "observed_at": "2026-10-07T21:10:50.131Z"
+  "error": "fatal: unable to access 'https://github.com/ShiauKe/dd1.git/': Failed to connect to github.com port 443 after 930988 ms: Timeout was reached",
+  "observed_at": "2026-10-07T21:26:26.171Z"
 }
