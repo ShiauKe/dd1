@@ -8,10 +8,10 @@
   "controller": "ready",
   "alive": true,
   "converging": true,
-  "poll_seq": 4117,
-  "last_poll_at": "2026-10-08T02:16:57.698Z",
+  "poll_seq": 4118,
+  "last_poll_at": "2026-10-08T02:49:59.358Z",
   "control_artifact": "ac964b1e16b8",
   "last_result": "deploy_failed",
-  "error": "Command failed: git fetch origin main",
-  "observed_at": "2026-10-08T02:49:56.096Z"
+  "error": "From https://github.com/ShiauKe/dd1\n * branch            main       -> FETCH_HEAD",
+  "observed_at": "2026-10-08T02:53:10.784Z"
 }
