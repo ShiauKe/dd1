@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "desired_sha": null,
+  "desired_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
   "validated_sha": null,
   "running_sha": "a7431744927abfb5b96b8ae623a8093a37cef068",
   "last_good_sha": "a7431744927abfb5b96b8ae623a8093a37cef068",
@@ -8,10 +8,10 @@
   "controller": "ready",
   "alive": true,
   "converging": true,
-  "poll_seq": 6550,
-  "last_poll_at": "2026-10-09T18:23:52.436Z",
+  "poll_seq": 6551,
+  "last_poll_at": "2026-10-09T18:25:53.396Z",
   "control_artifact": "ac964b1e16b8",
-  "last_result": "deploy_failed",
-  "error": "From https://github.com/ShiauKe/dd1\n * branch            main       -> FETCH_HEAD",
-  "observed_at": "2026-10-09T18:25:49.738Z"
+  "last_result": "candidate_found",
+  "error": null,
+  "observed_at": "2026-10-09T19:13:33.439Z"
 }
