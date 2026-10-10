@@ -1,17 +1,17 @@
 {
   "schema": 2,
-  "desired_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
-  "validated_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
+  "desired_sha": null,
+  "validated_sha": null,
   "running_sha": "a7431744927abfb5b96b8ae623a8093a37cef068",
   "last_good_sha": "a7431744927abfb5b96b8ae623a8093a37cef068",
   "health": "healthy",
   "controller": "ready",
   "alive": true,
   "converging": true,
-  "poll_seq": 7294,
-  "last_poll_at": "2026-10-10T10:31:28.426Z",
+  "poll_seq": 7319,
+  "last_poll_at": "2026-10-10T11:54:28.533Z",
   "control_artifact": "ac964b1e16b8",
-  "last_result": "validated",
-  "error": null,
-  "observed_at": "2026-10-10T10:31:33.717Z"
+  "last_result": "deploy_failed",
+  "error": "fatal: unable to access 'https://github.com/ShiauKe/dd1.git/': Could not resolve host: github.com",
+  "observed_at": "2026-10-10T11:54:32.108Z"
 }
