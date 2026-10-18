@@ -13,5 +13,5 @@
   "control_artifact": "ac964b1e16b8",
   "last_result": "deploy_failed",
   "error": "fatal: unable to access 'https://github.com/ShiauKe/dd1.git/': Recv failure: Connection reset by peer",
-  "observed_at": "2026-10-18T23:06:41.165Z"
+  "observed_at": "2026-10-18T23:21:46.640Z"
 }
