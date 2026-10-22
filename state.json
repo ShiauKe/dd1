@@ -8,10 +8,10 @@
   "controller": "ready",
   "alive": true,
   "converging": true,
-  "poll_seq": 21735,
-  "last_poll_at": "2026-10-22T01:11:45.602Z",
+  "poll_seq": 21736,
+  "last_poll_at": "2026-10-22T01:12:05.608Z",
   "control_artifact": "ac964b1e16b8",
-  "last_result": "deploy_failed",
-  "error": "activated candidate failed health",
-  "observed_at": "2026-10-22T01:12:01.279Z"
+  "last_result": "candidate_found",
+  "error": null,
+  "observed_at": "2026-10-22T01:12:07.589Z"
 }
