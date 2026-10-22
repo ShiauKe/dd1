@@ -11,7 +11,7 @@
   "poll_seq": 21942,
   "last_poll_at": "2026-10-22T02:20:52.102Z",
   "control_artifact": "ac964b1e16b8",
-  "last_result": "candidate_found",
-  "error": null,
-  "observed_at": "2026-10-22T02:20:54.403Z"
+  "last_result": "deploy_failed",
+  "error": "Command failed: /Users/shiauke/.nvm/versions/node/v22.16.0/bin/node /var/folders/0_/09frc_yx6955llyf66cs7vzh0000gn/T/dd1-candidate-5KD4tw/runtime/validator.js /var/folders/0_/09frc_yx6955llyf66cs7vzh0000gn/T/dd1-candidate-5KD4tw",
+  "observed_at": "2026-10-22T02:25:40.653Z"
 }
