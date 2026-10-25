@@ -11,7 +11,7 @@
   "poll_seq": 28840,
   "last_poll_at": "2026-10-25T01:30:51.250Z",
   "control_artifact": "ac964b1e16b8",
-  "last_result": "candidate_found",
-  "error": null,
-  "observed_at": "2026-10-25T01:30:53.161Z"
+  "last_result": "deploy_failed",
+  "error": "activated candidate failed health",
+  "observed_at": "2026-10-25T01:40:03.536Z"
 }
