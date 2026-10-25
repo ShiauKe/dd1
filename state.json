@@ -8,10 +8,10 @@
   "controller": "ready",
   "alive": true,
   "converging": true,
-  "poll_seq": 29071,
-  "last_poll_at": "2026-10-25T14:18:30.274Z",
+  "poll_seq": 29072,
+  "last_poll_at": "2026-10-25T14:34:29.328Z",
   "control_artifact": "a49175497526",
-  "last_result": "deploy_failed",
-  "error": "Command failed: git merge --ff-only origin/main",
-  "observed_at": "2026-10-25T14:34:26.141Z"
+  "last_result": "candidate_found",
+  "error": null,
+  "observed_at": "2026-10-25T14:34:31.291Z"
 }
