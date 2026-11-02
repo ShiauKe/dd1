@@ -1,17 +1,17 @@
 {
   "schema": 2,
-  "desired_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
-  "validated_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
+  "desired_sha": null,
+  "validated_sha": null,
   "running_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
   "last_good_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
   "health": "healthy",
   "controller": "ready",
   "alive": true,
   "converging": true,
-  "poll_seq": 936,
-  "last_poll_at": "2026-11-02T07:31:15.706Z",
+  "poll_seq": 937,
+  "last_poll_at": "2026-11-02T07:31:20.710Z",
   "control_artifact": "a49175497526",
-  "last_result": "poll_ok",
-  "error": null,
-  "observed_at": "2026-11-02T07:31:18.110Z"
+  "last_result": "poll_degraded",
+  "error": "From https://github.com/ShiauKe/dd1\n * branch            main       -> FETCH_HEAD",
+  "observed_at": "2026-11-02T07:42:57.986Z"
 }
