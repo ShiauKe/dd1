@@ -1,17 +1,17 @@
 {
   "schema": 2,
-  "desired_sha": null,
-  "validated_sha": null,
+  "desired_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
+  "validated_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
   "running_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
   "last_good_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
   "health": "healthy",
   "controller": "ready",
   "alive": true,
   "converging": true,
-  "poll_seq": 5376,
-  "last_poll_at": "2026-11-07T13:25:24.687Z",
+  "poll_seq": 5377,
+  "last_poll_at": "2026-11-07T14:00:25.865Z",
   "control_artifact": "a49175497526",
-  "last_result": "poll_degraded",
-  "error": "fatal: unable to access 'https://github.com/ShiauKe/dd1.git/': Resolving timed out after 1047901 milliseconds",
-  "observed_at": "2026-11-07T13:42:54.606Z"
+  "last_result": "poll_ok",
+  "error": null,
+  "observed_at": "2026-11-07T14:00:28.103Z"
 }
