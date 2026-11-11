@@ -8,10 +8,10 @@
   "controller": "ready",
   "alive": true,
   "converging": true,
-  "poll_seq": 8621,
-  "last_poll_at": "2026-11-11T03:10:42.918Z",
+  "poll_seq": 8622,
+  "last_poll_at": "2026-11-11T03:10:47.920Z",
   "control_artifact": "a49175497526",
   "last_result": "poll_ok",
   "error": null,
-  "observed_at": "2026-11-11T03:10:44.826Z"
+  "observed_at": "2026-11-11T03:10:49.853Z"
 }
