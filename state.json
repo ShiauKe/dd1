@@ -1,17 +1,17 @@
 {
   "schema": 2,
-  "desired_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
-  "validated_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
+  "desired_sha": null,
+  "validated_sha": null,
   "running_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
   "last_good_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
   "health": "healthy",
   "controller": "ready",
   "alive": true,
   "converging": true,
-  "poll_seq": 8872,
-  "last_poll_at": "2026-11-11T11:32:46.374Z",
+  "poll_seq": 8873,
+  "last_poll_at": "2026-11-11T11:32:51.377Z",
   "control_artifact": "a49175497526",
-  "last_result": "poll_ok",
-  "error": null,
-  "observed_at": "2026-11-11T11:32:48.322Z"
+  "last_result": "poll_degraded",
+  "error": "Command failed: git fetch origin main",
+  "observed_at": "2026-11-11T11:34:45.651Z"
 }
