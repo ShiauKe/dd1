@@ -1,17 +1,17 @@
 {
   "schema": 2,
-  "desired_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
-  "validated_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
+  "desired_sha": null,
+  "validated_sha": null,
   "running_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
   "last_good_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
   "health": "healthy",
   "controller": "ready",
   "alive": true,
   "converging": true,
-  "poll_seq": 9533,
-  "last_poll_at": "2026-11-12T12:08:00.999Z",
+  "poll_seq": 9534,
+  "last_poll_at": "2026-11-12T12:09:26.924Z",
   "control_artifact": "a49175497526",
-  "last_result": "poll_ok",
-  "error": null,
-  "observed_at": "2026-11-12T12:09:23.768Z"
+  "last_result": "poll_degraded",
+  "error": "fatal: unable to access 'https://github.com/ShiauKe/dd1.git/': Recv failure: Connection reset by peer",
+  "observed_at": "2026-11-12T12:24:30.999Z"
 }
