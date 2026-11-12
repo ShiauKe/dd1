@@ -8,10 +8,10 @@
   "controller": "ready",
   "alive": true,
   "converging": true,
-  "poll_seq": 9301,
-  "last_poll_at": "2026-11-12T00:30:03.477Z",
+  "poll_seq": 9302,
+  "last_poll_at": "2026-11-12T00:47:33.937Z",
   "control_artifact": "a49175497526",
   "last_result": "poll_degraded",
   "error": "Command failed: git fetch origin main",
-  "observed_at": "2026-11-12T00:47:30.613Z"
+  "observed_at": "2026-11-12T00:56:03.372Z"
 }
