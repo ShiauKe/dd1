@@ -1,17 +1,17 @@
 {
   "schema": 2,
-  "desired_sha": null,
-  "validated_sha": null,
+  "desired_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
+  "validated_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
   "running_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
   "last_good_sha": "a3677c05402e7ab8faf476c09c4a7c89371c1f0f",
   "health": "healthy",
   "controller": "ready",
   "alive": true,
   "converging": true,
-  "poll_seq": 9648,
-  "last_poll_at": "2026-11-12T18:12:29.835Z",
+  "poll_seq": 9649,
+  "last_poll_at": "2026-11-12T18:27:50.788Z",
   "control_artifact": "a49175497526",
-  "last_result": "poll_degraded",
-  "error": "fatal: unable to access 'https://github.com/ShiauKe/dd1.git/': Failed to connect to github.com port 443 after 915895 ms: Timeout was reached",
-  "observed_at": "2026-11-12T18:27:47.615Z"
+  "last_result": "poll_ok",
+  "error": null,
+  "observed_at": "2026-11-12T18:27:52.812Z"
 }
