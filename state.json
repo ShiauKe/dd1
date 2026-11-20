@@ -13,5 +13,5 @@
   "control_artifact": "a49175497526",
   "last_result": "poll_degraded",
   "error": "fatal: unable to access 'https://github.com/ShiauKe/dd1.git/': Failed to connect to github.com port 443 after 994238 ms: Timeout was reached",
-  "observed_at": "2026-11-20T19:40:51.965Z"
+  "observed_at": "2026-11-20T20:48:16.856Z"
 }
