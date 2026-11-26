@@ -8,10 +8,10 @@
   "controller": "ready",
   "alive": true,
   "converging": true,
-  "poll_seq": 28178,
-  "last_poll_at": "2026-11-26T08:10:07.945Z",
+  "poll_seq": 28179,
+  "last_poll_at": "2026-11-26T08:26:21.854Z",
   "control_artifact": "a49175497526",
   "last_result": "poll_degraded",
-  "error": "fatal: unable to access 'https://github.com/ShiauKe/dd1.git/': SSL connection timeout",
-  "observed_at": "2026-11-26T08:26:19.264Z"
+  "error": "From https://github.com/ShiauKe/dd1\n * branch            main       -> FETCH_HEAD",
+  "observed_at": "2026-11-26T08:29:09.651Z"
 }
