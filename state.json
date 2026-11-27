@@ -8,10 +8,10 @@
   "controller": "ready",
   "alive": true,
   "converging": true,
-  "poll_seq": 29467,
-  "last_poll_at": "2026-11-27T18:07:26.181Z",
+  "poll_seq": 29468,
+  "last_poll_at": "2026-11-27T18:39:58.947Z",
   "control_artifact": "a49175497526",
   "last_result": "poll_degraded",
-  "error": "Command failed: git fetch origin main",
-  "observed_at": "2026-11-27T18:39:55.701Z"
+  "error": "fatal: unable to access 'https://github.com/ShiauKe/dd1.git/': Failed to connect to github.com port 443 after 843888 ms: Timeout was reached",
+  "observed_at": "2026-11-27T18:54:04.740Z"
 }
